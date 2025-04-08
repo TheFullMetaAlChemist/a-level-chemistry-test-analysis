@@ -1,4 +1,4 @@
-/* Print Styles - Include this in a separate CSS file or add to your existing CSS */
+/* Print Styles for Test Analysis System - Simplified Version */
 
 /* Print-specific styles */
 @media print {
@@ -7,14 +7,21 @@
   #score-entry-section,
   .tab-buttons,
   button,
-  .toggle-buttons,
+  #followUpTab,
+  #modelAnswersTab,
   #followUpNavigation,
   .follow-up-controls {
     display: none !important;
   }
   
-  /* Show all tab content (normally hidden) */
+  /* Show only specific tab content */
   .tab-content {
+    display: none !important; /* Hide all tabs by default */
+  }
+  
+  /* Only show the topic performance and revision tabs */
+  #topicPerformance,
+  #revisionTab {
     display: block !important;
     page-break-inside: avoid;
     margin-bottom: 20px;
@@ -27,9 +34,7 @@
   .student-info, 
   .summary-card, 
   .summary-row, 
-  .recommendation, 
-  .model-answer,
-  .follow-up {
+  .recommendation {
     box-shadow: none !important;
     transform: none !important;
     animation: none !important;
@@ -68,19 +73,8 @@
     page-break-after: avoid;
   }
   
-  .model-answer, 
-  .recommendation,
-  .follow-up {
+  .recommendation {
     page-break-inside: avoid;
-  }
-  
-  /* Show follow-up answers that were entered */
-  .completed-answer {
-    display: block !important;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
-    background-color: #f9f9f9;
   }
   
   /* Print title for each section */
@@ -101,14 +95,6 @@
     content: "Revision Recommendations";
   }
   
-  #followUpTab::before {
-    content: "Completed Practice Questions";
-  }
-  
-  #modelAnswersTab::before {
-    content: "Model Answers";
-  }
-  
   /* Add a footer with date */
   @page {
     margin: 0.5cm;
@@ -127,23 +113,15 @@
   .no-print {
     display: none !important;
   }
-  
-  /* Show elements with class "print-only" */
-  .print-only {
-    display: block !important;
-  }
 }
 
 /* Print button styling (for screen only) */
 @media screen {
-  .print-only {
-    display: none;
-  }
-  
   #printButton {
     background-color: #4caf50;
     color: white;
     margin-top: 15px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
