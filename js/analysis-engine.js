@@ -269,12 +269,15 @@ function showFollowUpQuestion(index) {
       innerHTML += `<div class="part">
         <p><strong>${part})</strong> ${partData.question}</p>
         <textarea placeholder="Type your answer here..."></textarea>
-        <div class="toggle-buttons">
+        <div class="toggle-buttons no-print">
           <button onclick="toggleSubDisplay(this, 'hint', '${specCode}', '${part}')">Show Hint</button>
           <button onclick="toggleSubDisplay(this, 'answer', '${specCode}', '${part}')">Show Answer</button>
         </div>
-        <div id="sub-hint-${specCode}-${part}" class="hidden">${partData.hint}</div>
-        <div id="sub-answer-${specCode}-${part}" class="hidden">${partData.answer}</div>
+        <div id="sub-hint-${specCode}-${part}" class="hidden no-print">${partData.hint}</div>
+        <div id="sub-answer-${specCode}-${part}" class="hidden no-print">${partData.answer}</div>
+        <div class="print-only model-answer-print">
+          <strong>Model Answer:</strong> ${partData.answer}
+        </div>
       </div>`;
     }
     
@@ -391,5 +394,63 @@ function openTab(evt, tabName) {
   // Special handling for follow-up questions tab
   if (tabName === "followUpTab" && followUpArray.length > 0) {
     showFollowUpQuestion(currentFollowUpIndex);
+  }
+}
+
+/**
+ * Prepare all follow-up questions for printing
+ * This ensures all questions are loaded even if the user hasn't navigated to them
+ */
+function prepareFollowUpQuestionsForPrint() {
+  const followUpContainer = document.getElementById("followUpContainer");
+  const testData = getCurrentTestData();
+  
+  // Only proceed if we have test data
+  if (!testData || !testData.followUpQuestions) return;
+  
+  // Clear the container
+  followUpContainer.innerHTML = "";
+  
+  // Add each follow-up question to the container
+  followUpArray.forEach((specCode, index) => {
+    const data = testData.followUpQuestions.find(q => q.specCode === specCode);
+    
+    if (data) {
+      // Create a container for this follow-up question
+      const questionDiv = document.createElement("div");
+      questionDiv.className = "follow-up";
+      questionDiv.setAttribute('data-spec-code', specCode);
+      
+      let innerHTML = `<h4>${specCode}</h4>`;
+      innerHTML += `<p><em>${data.intro}</em></p>`;
+      
+      // For each part (a, b, c) generate a sub-section
+      const parts = data.parts;
+      for (let part in parts) {
+        const partData = parts[part];
+        innerHTML += `<div class="part">
+          <p><strong>${part})</strong> ${partData.question}</p>
+          <textarea placeholder="Type your answer here..."></textarea>
+          <div class="toggle-buttons no-print">
+            <button onclick="toggleSubDisplay(this, 'hint', '${specCode}', '${part}')">Show Hint</button>
+            <button onclick="toggleSubDisplay(this, 'answer', '${specCode}', '${part}')">Show Answer</button>
+          </div>
+          <div id="sub-hint-${specCode}-${part}" class="hidden no-print">${partData.hint}</div>
+          <div id="sub-answer-${specCode}-${part}" class="hidden no-print">${partData.answer}</div>
+          <div class="print-only model-answer-print">
+            <strong>Model Answer:</strong> ${partData.answer}
+          </div>
+        </div>`;
+      }
+      
+      questionDiv.innerHTML = innerHTML;
+      followUpContainer.appendChild(questionDiv);
+    }
+  });
+  
+  // Update the navigation controls
+  if (followUpArray.length > 0) {
+    document.getElementById("followUpNavigation").classList.remove("hidden");
+    document.getElementById("questionCounter").textContent = `Questions: ${followUpArray.length} total`;
   }
 }
