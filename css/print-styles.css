@@ -1,0 +1,160 @@
+/* Print Styles - Include this in a separate CSS file or add to your existing CSS */
+
+/* Print-specific styles */
+@media print {
+  /* Hide elements we don't want to print */
+  #test-selection-section,
+  #score-entry-section,
+  .tab-buttons,
+  button,
+  .toggle-buttons,
+  #followUpNavigation,
+  .follow-up-controls {
+    display: none !important;
+  }
+  
+  /* Show all tab content (normally hidden) */
+  .tab-content {
+    display: block !important;
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+    padding: 15px 0;
+    box-shadow: none;
+  }
+  
+  /* Remove box shadows and animations for better printing */
+  .section, 
+  .student-info, 
+  .summary-card, 
+  .summary-row, 
+  .recommendation, 
+  .model-answer,
+  .follow-up {
+    box-shadow: none !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+    border: 1px solid #ddd !important;
+  }
+  
+  /* Improve header appearance in print */
+  header {
+    background: none !important;
+    color: black !important;
+    padding: 10px 0 !important;
+    text-align: center !important;
+    border-bottom: 2px solid #1e88e5 !important;
+    margin-bottom: 20px !important;
+    box-shadow: none !important;
+  }
+  
+  header h1 {
+    color: #1e88e5 !important;
+    text-shadow: none !important;
+  }
+  
+  header p {
+    color: #333 !important;
+  }
+  
+  /* Improve grade display in print */
+  .grade-display {
+    box-shadow: none !important;
+    border: 2px solid #333 !important;
+  }
+  
+  /* Add page breaks where appropriate */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  .model-answer, 
+  .recommendation,
+  .follow-up {
+    page-break-inside: avoid;
+  }
+  
+  /* Show follow-up answers that were entered */
+  .completed-answer {
+    display: block !important;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+  }
+  
+  /* Print title for each section */
+  .tab-content::before {
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  #topicPerformance::before {
+    content: "Topic Performance";
+  }
+  
+  #revisionTab::before {
+    content: "Revision Recommendations";
+  }
+  
+  #followUpTab::before {
+    content: "Completed Practice Questions";
+  }
+  
+  #modelAnswersTab::before {
+    content: "Model Answers";
+  }
+  
+  /* Add a footer with date */
+  @page {
+    margin: 0.5cm;
+  }
+  
+  body::after {
+    content: "Printed on " attr(data-print-date);
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    margin-top: 20px;
+    color: #666;
+  }
+  
+  /* Hide elements with class "no-print" */
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Show elements with class "print-only" */
+  .print-only {
+    display: block !important;
+  }
+}
+
+/* Print button styling (for screen only) */
+@media screen {
+  .print-only {
+    display: none;
+  }
+  
+  #printButton {
+    background-color: #4caf50;
+    color: white;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  #printButton:hover {
+    background-color: #388e3c;
+  }
+  
+  #printButton::before {
+    content: "🖨️";
+  }
+}
