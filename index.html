@@ -139,27 +139,57 @@
   
   <!-- Print Functionality -->
  <script>
-  // Print functionality - simplified version
-  document.addEventListener('DOMContentLoaded', function() {
-    // Make sure the element exists before adding the event listener
-    const printButton = document.getElementById('printButton');
-    if (printButton) {
-      printButton.addEventListener('click', simplePrint);
-    }
-  });
-  
-  function simplePrint() {
-    // Set today's date for the print footer
-    document.body.setAttribute('data-print-date', new Date().toLocaleDateString());
-    
-    // Make sure the topic performance tab and revision tab are displayed
-    // even if they're not the active tab
-    document.getElementById('topicPerformance').classList.add('print-visible');
-    document.getElementById('revisionTab').classList.add('print-visible');
-    
-    // Print the document
-    window.print();
+  // Print functionality - ultra-compact version
+document.addEventListener('DOMContentLoaded', function() {
+  // Make sure the element exists before adding the event listener
+  const printButton = document.getElementById('printButton');
+  if (printButton) {
+    printButton.addEventListener('click', ultraCompactPrint);
   }
+});
+
+function ultraCompactPrint() {
+  // Set today's date for the print footer
+  document.body.setAttribute('data-print-date', new Date().toLocaleDateString());
+  
+  // Make sure the topic performance tab and revision tab are displayed
+  // even if they're not the active tab
+  document.getElementById('topicPerformance').classList.add('print-visible');
+  document.getElementById('revisionTab').classList.add('print-visible');
+  
+  // Temporarily modify the DOM for better print layout
+  prepareCompactLayout();
+  
+  // Print the document
+  window.print();
+  
+  // Reset any temporary changes (if browser reflow occurs after print)
+  setTimeout(resetLayout, 1000);
+}
+
+function prepareCompactLayout() {
+  // Modify grade display container for more compact layout
+  const gradeContainer = document.getElementById('gradeContainer');
+  if (gradeContainer) {
+    // Move the grade percentage inside
+    const gradePercentage = document.getElementById('gradePercentage');
+    const gradeDisplay = document.getElementById('gradeDisplay');
+    
+    // Remove any existing paragraph wrapping the grade display
+    const paragraphs = gradeContainer.querySelectorAll('p');
+    if (paragraphs.length > 0) {
+      paragraphs[0].innerHTML = 'Your grade:';
+    }
+  }
+  
+  // Add special print class to the body
+  document.body.classList.add('ultra-compact-print');
+}
+
+function resetLayout() {
+  // Remove special print class
+  document.body.classList.remove('ultra-compact-print');
+}
 </script>
 </body>
 </html>
