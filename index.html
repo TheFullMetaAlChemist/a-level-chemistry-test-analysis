@@ -138,47 +138,28 @@
   <script src="js/analysis-engine.js"></script>
   
   <!-- Print Functionality -->
-  <script>
-    // Print functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      // Make sure the element exists before adding the event listener
-      const printButton = document.getElementById('printButton');
-      if (printButton) {
-        printButton.addEventListener('click', prepareAndPrint);
-      }
-    });
-    
-    function prepareAndPrint() {
-      // Set today's date for the print footer
-      document.body.setAttribute('data-print-date', new Date().toLocaleDateString());
-      
-      // Show all follow-up questions for printing
-      prepareFollowUpQuestionsForPrint();
-      
-      // Collect any answers from follow-up questions
-      collectFollowUpAnswers();
-      
-      // Print the document
-      window.print();
+ <script>
+  // Print functionality - simplified version
+  document.addEventListener('DOMContentLoaded', function() {
+    // Make sure the element exists before adding the event listener
+    const printButton = document.getElementById('printButton');
+    if (printButton) {
+      printButton.addEventListener('click', simplePrint);
     }
+  });
+  
+  function simplePrint() {
+    // Set today's date for the print footer
+    document.body.setAttribute('data-print-date', new Date().toLocaleDateString());
     
-    function collectFollowUpAnswers() {
-      // Get all textarea elements in follow-up questions
-      const textareas = document.querySelectorAll('.follow-up textarea');
-      
-      textareas.forEach(textarea => {
-        // Only process textareas that have content
-        if (textarea.value.trim()) {
-          // Create a div to display the answer in print view
-          const answerDiv = document.createElement('div');
-          answerDiv.className = 'completed-answer print-only';
-          answerDiv.innerHTML = '<strong>Your Answer:</strong><br>' + textarea.value.replace(/\n/g, '<br>');
-          
-          // Insert after the textarea
-          textarea.parentNode.insertBefore(answerDiv, textarea.nextSibling);
-        }
-      });
-    }
-  </script>
+    // Make sure the topic performance tab and revision tab are displayed
+    // even if they're not the active tab
+    document.getElementById('topicPerformance').classList.add('print-visible');
+    document.getElementById('revisionTab').classList.add('print-visible');
+    
+    // Print the document
+    window.print();
+  }
+</script>
 </body>
 </html>
