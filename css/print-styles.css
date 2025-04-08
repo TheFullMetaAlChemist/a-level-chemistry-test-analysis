@@ -1,7 +1,19 @@
-/* Print Styles for Test Analysis System - Simplified Version */
+/* Print Styles for Test Analysis System - Compact Version */
 
 /* Print-specific styles */
 @media print {
+  /* Overall page settings */
+  @page {
+    margin: 0.5cm;
+    size: portrait;
+  }
+  
+  /* Basic text sizing */
+  body {
+    font-size: 11pt;
+    line-height: 1.3;
+  }
+  
   /* Hide elements we don't want to print */
   #test-selection-section,
   #score-entry-section,
@@ -24,12 +36,12 @@
   #revisionTab {
     display: block !important;
     page-break-inside: avoid;
-    margin-bottom: 20px;
-    padding: 15px 0;
+    margin: 0.5cm 0;
+    padding: 0;
     box-shadow: none;
   }
   
-  /* Remove box shadows and animations for better printing */
+  /* Remove unnecessary spacing and decoration */
   .section, 
   .student-info, 
   .summary-card, 
@@ -39,52 +51,147 @@
     transform: none !important;
     animation: none !important;
     transition: none !important;
+    margin-bottom: 0.5cm !important;
+    padding: 0.3cm !important;
     border: 1px solid #ddd !important;
   }
   
-  /* Improve header appearance in print */
+  /* Compress header */
   header {
     background: none !important;
     color: black !important;
-    padding: 10px 0 !important;
+    padding: 0.3cm 0 !important;
     text-align: center !important;
     border-bottom: 2px solid #1e88e5 !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 0.5cm !important;
     box-shadow: none !important;
   }
   
   header h1 {
     color: #1e88e5 !important;
     text-shadow: none !important;
+    font-size: 16pt !important;
+    margin: 0 !important;
   }
   
   header p {
     color: #333 !important;
+    font-size: 11pt !important;
+    margin: 0.1cm 0 0 !important;
   }
   
-  /* Improve grade display in print */
+  /* More compact student info */
+  .student-info {
+    padding: 0.3cm !important;
+    margin-bottom: 0.5cm !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5cm !important;
+  }
+  
+  .info-group {
+    margin: 0 !important;
+  }
+  
+  /* Optimize the result summary display */
+  .result-summary {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.5cm !important;
+    margin-bottom: 0.5cm !important;
+  }
+  
+  .summary-card {
+    flex: 1 !important;
+    min-width: 45% !important;
+    padding: 0.3cm !important;
+  }
+  
+  /* Compact grade display */
+  .grade-display-container {
+    text-align: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
   .grade-display {
+    font-size: 2.5em !important;
+    width: 1.5cm !important;
+    height: 1.5cm !important;
+    line-height: 1.5cm !important;
     box-shadow: none !important;
     border: 2px solid #333 !important;
+    margin: 0.2cm auto !important;
   }
   
-  /* Add page breaks where appropriate */
-  h2, h3 {
-    page-break-after: avoid;
+  /* Make paragraphs more compact */
+  p {
+    margin: 0.2cm 0 !important;
   }
   
+  /* More compact progress bars */
+  .progress-container {
+    margin: 0.2cm 0 !important;
+  }
+  
+  .progress-bar {
+    height: 18px !important;
+  }
+  
+  .progress-label {
+    width: 80px !important;
+    font-size: 10pt !important;
+  }
+  
+  .progress-text {
+    width: 40px !important;
+    font-size: 10pt !important;
+  }
+  
+  /* More compact topic performance rows */
+  .summary-row {
+    padding: 0.2cm !important;
+    margin: 0.2cm 0 !important;
+  }
+  
+  .summary-row small {
+    font-size: 9pt !important;
+  }
+  
+  /* More compact recommendation boxes */
   .recommendation {
-    page-break-inside: avoid;
+    padding: 0.2cm !important;
+    margin-bottom: 0.3cm !important;
   }
   
-  /* Print title for each section */
+  .recommendation h4 {
+    margin: 0 0 0.2cm 0 !important;
+    font-size: 12pt !important;
+  }
+  
+  .recommendation h5 {
+    margin: 0.2cm 0 0.1cm 0 !important;
+    font-size: 11pt !important;
+  }
+  
+  .recommendation ul {
+    margin: 0.1cm 0 !important;
+    padding-left: 0.5cm !important;
+  }
+  
+  .recommendation li {
+    margin-bottom: 0.05cm !important;
+    font-size: 10pt !important;
+  }
+  
+  /* Print title for each section - more compact */
   .tab-content::before {
-    font-weight: bold;
-    font-size: 18px;
-    display: block;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 5px;
+    font-weight: bold !important;
+    font-size: 14pt !important;
+    display: block !important;
+    margin-bottom: 0.2cm !important;
+    border-bottom: 1px solid #ddd !important;
+    padding-bottom: 0.1cm !important;
   }
   
   #topicPerformance::before {
@@ -95,23 +202,51 @@
     content: "Revision Recommendations";
   }
   
-  /* Add a footer with date */
-  @page {
-    margin: 0.5cm;
+  /* Reduce margins on headings */
+  h2, h3, h4, h5 {
+    margin: 0.2cm 0 0.1cm 0 !important;
   }
   
+  h2 {
+    font-size: 14pt !important;
+  }
+  
+  h3 {
+    font-size: 13pt !important;
+  }
+  
+  /* Add a compact footer with date */
   body::after {
     content: "Printed on " attr(data-print-date);
     display: block;
     text-align: center;
-    font-size: 10px;
-    margin-top: 20px;
+    font-size: 8pt;
+    margin-top: 0.2cm;
     color: #666;
+  }
+  
+  /* Fix page breaks */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  .recommendation {
+    page-break-inside: avoid;
   }
   
   /* Hide elements with class "no-print" */
   .no-print {
     display: none !important;
+  }
+  
+  /* Remove tab container padding */
+  .tab-container {
+    margin-top: 0 !important;
+  }
+  
+  /* Reduce spacing in the container */
+  .container {
+    padding: 0 !important;
   }
 }
 
@@ -134,5 +269,10 @@
   
   #printButton::before {
     content: "🖨️";
+  }
+  
+  /* Need to define this class for print preview on screen */
+  .print-visible {
+    /* No specific styles needed, just for targeting */
   }
 }
