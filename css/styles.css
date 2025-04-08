@@ -609,6 +609,71 @@ button.success:hover {
   outline: none;
 }
 
+/* Password protection styles - NEW */
+#modelAnswers-password-container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  background-color: #f9f9f9;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.password-input-group {
+  display: flex;
+  max-width: 300px;
+  margin: 1rem auto;
+}
+
+.password-input-group input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  font-size: 16px;
+}
+
+.password-input-group input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-light);
+  outline: none;
+}
+
+.password-input-group button {
+  padding: 10px 16px;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.password-input-group button:hover {
+  background-color: #283593;
+  transform: none;
+  box-shadow: none;
+}
+
+.error-message {
+  color: var(--accent-color);
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+  min-height: 1.2em;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.password-shake {
+  animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 10px;
@@ -652,6 +717,15 @@ button.success:hover {
     height: 100px;
     line-height: 100px;
     font-size: 2.5em;
+  }
+  
+  #modelAnswers-password-container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  
+  .password-input-group {
+    max-width: 100%;
   }
 }
 
