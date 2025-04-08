@@ -123,11 +123,25 @@
           </div>
         </div>
         
-        <!-- Model Answers Tab -->
+        <!-- Model Answers Tab - Updated with password protection structure -->
         <div id="modelAnswersTab" class="tab-content">
           <h3>Model Answers & Tips</h3>
-          <p>Here are model answers for each question in the test, with tips to help you improve.</p>
-          <div id="modelAnswersContainer"></div>
+          
+          <!-- Password protection container - shown initially -->
+          <div id="modelAnswers-password-container">
+            <p>Teacher access only. Please enter the password to view model answers.</p>
+            <div class="password-input-group">
+              <input type="password" id="teacher-password" placeholder="Enter password">
+              <button id="password-submit">Unlock</button>
+            </div>
+            <p id="password-message" class="error-message"></p>
+          </div>
+          
+          <!-- Model answers content - hidden initially -->
+          <div id="modelAnswersContainer" class="hidden">
+            <p>Here are model answers for each question in the test, with tips to help you improve.</p>
+            <!-- Model answers will be populated here -->
+          </div>
         </div>
       </div>
     </div>
