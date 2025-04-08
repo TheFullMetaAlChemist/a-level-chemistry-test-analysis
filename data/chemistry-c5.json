@@ -1,0 +1,500 @@
+{
+  "title": "C5 Chemical Changes",
+  "subtitle": "AQA GCSE Chemistry Test Analysis",
+  
+  "specifications": [
+    {
+      "code": "C4.2.2",
+      "description": "Acids, bases, neutralisation reactions, and definition of alkalis"
+    },
+    {
+      "code": "C4.2.3",
+      "description": "Practical methods to produce salts and reactivity of metals with acids"
+    },
+    {
+      "code": "WS 2.2",
+      "description": "Variables in experiments and identification of independent variables"
+    },
+    {
+      "code": "C4.1.2",
+      "description": "Displacement reactions, order of reactivity, and reactivity of group 1 metals"
+    },
+    {
+      "code": "C4.1.4",
+      "description": "Limitations in experimental results and oxidation-reduction reactions"
+    },
+    {
+      "code": "WS 2.7",
+      "description": "Improving experimental accuracy"
+    },
+    {
+      "code": "C4.2.6",
+      "description": "pH scale, hydrogen ion concentration, and strength of acids"
+    }
+  ],
+  
+  "questions": [
+    {
+      "number": "01.1",
+      "specCode": "C4.2.2",
+      "specDescription": "Identify types of substances (base)",
+      "marks": 1,
+      "assessmentObjective": "AO1"
+    },
+    {
+      "number": "01.2",
+      "specCode": "C4.2.2",
+      "specDescription": "Types of chemical reactions",
+      "marks": 1,
+      "assessmentObjective": "AO1"
+    },
+    {
+      "number": "01.3",
+      "specCode": "C4.2.2",
+      "specDescription": "Balanced symbol equations",
+      "marks": 2,
+      "assessmentObjective": "AO2"
+    },
+    {
+      "number": "01.4",
+      "specCode": "C4.2.3",
+      "specDescription": "Practical methods to produce salts",
+      "marks": 6,
+      "assessmentObjective": "AO1"
+    },
+    {
+      "number": "02.1",
+      "specCode": "WS 2.2",
+      "specDescription": "Control variables in experiments",
+      "marks": 1,
+      "assessmentObjective": "AO1"
+    },
+    {
+      "number": "02.2",
+      "specCode": "WS 2.2",
+      "specDescription": "Identifying independent variables",
+      "marks": 1,
+      "assessmentObjective": "AO2"
+    },
+    {
+      "number": "02.3",
+      "specCode": "C4.1.2",
+      "specDescription": "Displacement reactions with state symbols",
+      "marks": 3,
+      "assessmentObjective": "AO2"
+    },
+    {
+      "number": "02.4",
+      "specCode": "C4.1.2",
+      "specDescription": "Order of reactivity from experimental data",
+      "marks": 2,
+      "assessmentObjective": "AO3"
+    },
+    {
+      "number": "02.5",
+      "specCode": "C4.1.4",
+      "specDescription": "Limitations in experimental results",
+      "marks": 2,
+      "assessmentObjective": "AO3"
+    },
+    {
+      "number": "02.6",
+      "specCode": "WS 2.7",
+      "specDescription": "Improving experimental accuracy",
+      "marks": 2,
+      "assessmentObjective": "AO3"
+    },
+    {
+      "number": "02.7",
+      "specCode": "C4.2.3",
+      "specDescription": "Reactivity of metals with acids",
+      "marks": 1,
+      "assessmentObjective": "AO2"
+    },
+    {
+      "number": "02.8",
+      "specCode": "C4.1.2",
+      "specDescription": "Reactivity of group 1 metals",
+      "marks": 1,
+      "assessmentObjective": "AO3"
+    },
+    {
+      "number": "02.9",
+      "specCode": "C4.1.4",
+      "specDescription": "Oxidation and reduction in terms of electrons",
+      "marks": 2,
+      "assessmentObjective": "AO2"
+    },
+    {
+      "number": "03.1",
+      "specCode": "C4.2.2",
+      "specDescription": "Definition of alkalis",
+      "marks": 1,
+      "assessmentObjective": "AO1"
+    },
+    {
+      "number": "03.2",
+      "specCode": "C4.2.6",
+      "specDescription": "pH scale and concentration of hydrogen ions",
+      "marks": 1,
+      "assessmentObjective": "AO2"
+    },
+    {
+      "number": "03.3",
+      "specCode": "C4.2.6",
+      "specDescription": "Strength of acids and ionisation",
+      "marks": 3,
+      "assessmentObjective": "AO1"
+    }
+  ],
+  
+  "revisionRecommendations": [
+    {
+      "specCode": "C4.2.2",
+      "title": "Acids, Bases and Neutralisation",
+      "content": "Focus on understanding the properties of acids and bases, neutralisation reactions, and the formation of salts. Practice writing balanced symbol equations for neutralisation reactions and understand the role of indicators in these reactions.",
+      "resources": [
+        "Review pages 56-59 in your textbook",
+        "Watch 'Acids and Bases Explained' video on the school VLE",
+        "Complete the online quiz on neutralisation reactions"
+      ]
+    },
+    {
+      "specCode": "C4.2.3",
+      "title": "Salt Preparation Methods",
+      "content": "Review practical methods for preparing soluble and insoluble salts. Ensure you understand the full process from neutralisation to crystallisation, including titration procedures.",
+      "resources": [
+        "Review the practical worksheets from class on salt preparation",
+        "Practice the titration calculations in your revision workbook",
+        "Watch the demonstration video on salt crystallisation"
+      ]
+    },
+    {
+      "specCode": "C4.1.2",
+      "title": "Reactivity Series and Displacement",
+      "content": "Strengthen your understanding of the reactivity series and displacement reactions. Be able to predict reactions based on metal reactivity and write balanced equations for these reactions.",
+      "resources": [
+        "Create flashcards for the reactivity series",
+        "Practice predicting reaction outcomes based on the reactivity series",
+        "Complete the displacement reactions worksheet"
+      ]
+    },
+    {
+      "specCode": "C4.1.4",
+      "title": "Oxidation and Reduction (Redox)",
+      "content": "Focus on understanding oxidation and reduction in terms of electron transfer. Practice identifying which substances are oxidized and which are reduced in reactions.",
+      "resources": [
+        "Review the redox section in your revision guide",
+        "Complete the electron transfer diagrams worksheet",
+        "Try the online interactive on identifying redox reactions"
+      ]
+    },
+    {
+      "specCode": "WS 2.2",
+      "title": "Variables in Scientific Investigations",
+      "content": "Ensure you can identify independent, dependent, and control variables in experiments. Practice designing investigations with appropriate variables.",
+      "resources": [
+        "Review the 'Planning Investigations' section in your workbook",
+        "Complete the variables identification exercises",
+        "Watch the 'Scientific Method' tutorial on the school VLE"
+      ]
+    },
+    {
+      "specCode": "WS 2.7",
+      "title": "Improving Experimental Accuracy",
+      "content": "Focus on understanding how to improve the accuracy, precision, and reliability of experimental results. Know the difference between random and systematic errors.",
+      "resources": [
+        "Review the 'Experimental Techniques' notes",
+        "Practice identifying sources of error in example experiments",
+        "Complete the data analysis worksheet"
+      ]
+    },
+    {
+      "specCode": "C4.2.6",
+      "title": "pH and Acid Strength",
+      "content": "Review the relationship between pH, hydrogen ion concentration, and acid strength. Ensure you understand the difference between strong and weak acids in terms of ionization.",
+      "resources": [
+        "Study the pH and acid strength diagrams in your textbook",
+        "Complete the acid strength calculations worksheet",
+        "Try the online pH scale simulator"
+      ]
+    }
+  ],
+  
+  "followUpQuestions": [
+    {
+      "specCode": "C4.2.2",
+      "intro": "A student wants to make sodium sulfate crystals using sulfuric acid and sodium hydroxide.",
+      "parts": {
+        "a": {
+          "question": "Write the balanced symbol equation for the reaction.",
+          "answer": "H₂SO₄ + 2NaOH → Na₂SO₄ + 2H₂O",
+          "hint": "Recall the neutralisation reaction between sulfuric acid and sodium hydroxide. Write the correct chemical formulas and ensure the equation is balanced (same number of each atom on both sides)."
+        },
+        "b": {
+          "question": "Explain why an indicator is used in this reaction.",
+          "answer": "An indicator is used because both the acid and the base are colourless; it changes colour at the endpoint of the titration, indicating that neutralisation is complete.",
+          "hint": "Consider how, in a colourless solution, it is difficult to identify the end-point. An indicator provides a visual cue when the acid has been neutralised."
+        },
+        "c": {
+          "question": "Describe how the student could obtain pure, dry crystals of sodium sulfate from the reaction mixture.",
+          "answer": "The student should titrate with an indicator to determine the endpoint, then repeat the reaction without the indicator using the correct volumes, gently heat the solution to evaporate water, allow it to cool for crystallisation, and finally filter and dry the crystals.",
+          "hint": "Review the process of crystallisation: titration for precision, evaporation to remove excess water, cooling for crystal formation, and filtration/drying to purify the crystals."
+        }
+      }
+    },
+    {
+      "specCode": "C4.2.3",
+      "intro": "A student reacts magnesium carbonate with hydrochloric acid to make magnesium chloride.",
+      "parts": {
+        "a": {
+          "question": "Write a word equation for the reaction.",
+          "answer": "Magnesium carbonate + Hydrochloric acid → Magnesium chloride + Water + Carbon dioxide",
+          "hint": "List the reactants and products in words. Remember that carbonate reactions yield water and carbon dioxide."
+        },
+        "b": {
+          "question": "What gas is produced, and how could you test for it?",
+          "answer": "Carbon dioxide (CO₂) is produced; it can be tested by passing the gas through limewater, which turns cloudy due to the formation of calcium carbonate.",
+          "hint": "Carbonate-acid reactions produce CO₂. The classic test is to bubble the gas through limewater and observe if it turns milky."
+        },
+        "c": {
+          "question": "Explain why excess magnesium carbonate is added and describe the steps to obtain dry magnesium chloride crystals.",
+          "answer": "Excess magnesium carbonate ensures that all the hydrochloric acid reacts. The procedure involves filtering out unreacted carbonate, gently heating the filtrate to evaporate water, allowing crystallisation, and then filtering and drying the crystals.",
+          "hint": "Consider why complete reaction is important to avoid residual acid. List the purification steps: filtration, evaporation, crystallisation, and drying."
+        }
+      }
+    },
+    {
+      "specCode": "C4.1.4",
+      "intro": "A student adds a piece of magnesium to solutions of different metal sulfates and records the results.",
+      "parts": {
+        "a": {
+          "question": "Explain why a reaction occurs between magnesium and copper sulfate but not with magnesium and magnesium sulfate.",
+          "answer": "Magnesium is more reactive than copper, so it displaces copper from copper sulfate; however, magnesium cannot displace itself from magnesium sulfate as it has the same reactivity.",
+          "hint": "Review the reactivity series. A metal will only displace another metal if it is more reactive. Compare the positions of magnesium and copper."
+        },
+        "b": {
+          "question": "Write a balanced symbol equation for the reaction between magnesium and copper sulfate (include state symbols).",
+          "answer": "Mg(s) + CuSO₄(aq) → Cu(s) + MgSO₄(aq)",
+          "hint": "Ensure you include the physical states: (s) for solids and (aq) for aqueous solutions. Balance the equation correctly."
+        },
+        "c": {
+          "question": "Predict what would happen if iron was added to copper sulfate solution, and explain your answer.",
+          "answer": "Iron would displace copper from copper sulfate, forming iron sulfate and depositing copper. This happens because iron is more reactive than copper in the reactivity series.",
+          "hint": "Consider the reactivity of iron relative to copper. If iron is more reactive than copper, it will replace it in the solution."
+        }
+      }
+    },
+    {
+      "specCode": "C4.2.6",
+      "intro": "A student measures the pH of two acid solutions: Hydrochloric acid (pH = 1) and ethanoic acid (pH = 3).",
+      "parts": {
+        "a": {
+          "question": "Explain why the pH values differ despite both acids having the same concentration.",
+          "answer": "HCl is a strong acid that completely ionizes, producing a high concentration of H⁺ ions (pH 1), while ethanoic acid is a weak acid that partially ionizes, resulting in a higher pH (pH 3).",
+          "hint": "Recall the difference in ionization between strong and weak acids. Full ionization of HCl yields more hydrogen ions compared to the partial ionization of ethanoic acid."
+        },
+        "b": {
+          "question": "Which acid is strong and which is weak?",
+          "answer": "Hydrochloric acid (HCl) is strong; ethanoic acid (CH₃COOH) is weak.",
+          "hint": "Based on the ionization properties, determine which acid releases more H⁺ ions in solution."
+        },
+        "c": {
+          "question": "Predict what happens to the pH when ethanoic acid is diluted with distilled water and explain why.",
+          "answer": "Dilution decreases the concentration of H⁺ ions, so the pH increases (becomes less acidic).",
+          "hint": "Consider that lowering the concentration of the acid (and thus the H⁺ ions) shifts the pH closer to neutral."
+        }
+      }
+    },
+    {
+      "specCode": "WS 2.2",
+      "intro": "A student investigates how temperature affects the rate of reaction between sodium thiosulfate and hydrochloric acid.",
+      "parts": {
+        "a": {
+          "question": "Identify the independent variable, the dependent variable, and one control variable.",
+          "answer": "Independent variable: Temperature; Dependent variable: Time taken for the solution to turn cloudy; Control variable: Volume/concentration of reactants.",
+          "hint": "Differentiate between what is changed, what is measured, and what must remain constant in the experiment."
+        },
+        "b": {
+          "question": "Explain why repeating the experiment and calculating a mean improves accuracy.",
+          "answer": "Repeating the experiment reduces random errors and increases the reliability and accuracy of the results by averaging out anomalies.",
+          "hint": "Consider how multiple trials can minimize the impact of outliers and improve overall accuracy."
+        },
+        "c": {
+          "question": "Describe how the student could ensure a fair test in this investigation.",
+          "answer": "The student should keep all conditions constant except the independent variable (temperature), use the same equipment and procedure for every trial, and control any extraneous variables.",
+          "hint": "Focus on the importance of standardization and control in experimental design."
+        }
+      }
+    }
+  ],
+  
+  "modelAnswers": [
+    {
+      "question": "01.1 - What type of substance is copper oxide?",
+      "answer": "Copper oxide is a base (option D).",
+      "tips": [
+        "Remember: A base is a substance that can neutralize an acid to form a salt and water",
+        "Metal oxides like copper oxide are bases, even though they are insoluble",
+        "Only soluble bases are called alkalis",
+        "Don't confuse 'insoluble' with 'acid' - many bases are insoluble"
+      ]
+    },
+    {
+      "question": "01.2 - Name the type of reaction taking place when copper oxide reacts with dilute hydrochloric acid.",
+      "answer": "Neutralization reaction",
+      "tips": [
+        "This is a key reaction type: base + acid → salt + water",
+        "Even though copper oxide is insoluble, it still acts as a base",
+        "Always use the term 'neutralization' when an acid reacts with a base",
+        "Spelling is important: use 'neutralisation' or 'neutralization'"
+      ]
+    },
+    {
+      "question": "01.3 - Write a balanced symbol equation for the reaction between copper oxide and hydrochloric acid.",
+      "answer": "CuO + 2HCl → CuCl₂ + H₂O",
+      "tips": [
+        "Start by writing the correct formulas for all reactants and products",
+        "Remember copper forms Cu²⁺ ions, so copper chloride is CuCl₂",
+        "Count atoms on both sides to ensure the equation is balanced",
+        "Notice that 2 HCl are needed to balance with one CuO",
+        "You can include state symbols (s), (aq), etc. for extra credit, but they weren't required here"
+      ]
+    },
+    {
+      "question": "01.4 - Describe how you could produce pure dry crystals of copper chloride from copper oxide and dilute hydrochloric acid.",
+      "answer": "1. Add excess copper oxide to dilute hydrochloric acid in a beaker\n2. Warm the mixture gently and stir until no more copper oxide reacts (some will remain undissolved)\n3. Filter the mixture to remove the excess copper oxide\n4. Pour the filtrate (copper chloride solution) into an evaporating dish\n5. Heat gently to evaporate some of the water until crystals start to form\n6. Leave to cool and allow crystals to form\n7. Filter to collect the crystals\n8. Pat dry between filter papers or leave to dry in a warm place",
+      "tips": [
+        "Use excess copper oxide to ensure all the acid reacts",
+        "Include all key steps in a logical order: reaction, filtration, evaporation, crystallization, and drying",
+        "Mention gentle heating to avoid decomposition",
+        "For full marks, include practical details like using an evaporating dish and filter paper",
+        "Use the correct technical terms: filtrate, excess, evaporate",
+        "Remember that copper chloride solution is blue, but this isn't necessary to mention"
+      ]
+    },
+    {
+      "question": "02.1 - Give one variable the student should control in the metal reactivity investigation.",
+      "answer": "Volume/concentration of copper sulfate solution OR mass/surface area/particle size of metal powder OR initial temperature of the solution",
+      "tips": [
+        "A control variable is something you keep the same for a fair test",
+        "Choose something that would affect the temperature change if it varied",
+        "Common examples include: volume of solution, concentration, mass of reactants, surface area",
+        "Only ONE variable was required here - don't waste time listing multiple variables"
+      ]
+    },
+    {
+      "question": "02.2 - Name the independent variable in the student's investigation.",
+      "answer": "The type of metal powder used",
+      "tips": [
+        "The independent variable is what you deliberately change",
+        "In this experiment, different metals are being tested for reactivity",
+        "Be specific - 'metal' alone is not sufficient, specify 'type of metal' or 'identity of metal'"
+      ]
+    },
+    {
+      "question": "02.3 - Complete the equation for the reaction between zinc and copper sulfate, including state symbols.",
+      "answer": "Zn(s) + CuSO₄(aq) → Cu(s) + ZnSO₄(aq)",
+      "tips": [
+        "You must include ALL state symbols correctly for full marks",
+        "Solid metals are (s), solutions are (aq)",
+        "This is a displacement reaction because zinc is more reactive than copper",
+        "The formula for zinc sulfate is ZnSO₄ (zinc forms Zn²⁺ ions)",
+        "Make sure the equation is balanced by checking atom counts on both sides"
+      ]
+    },
+    {
+      "question": "02.4 - Use these results to place the metals in Table 1 in an estimated order of reactivity.",
+      "answer": "Most reactive to least reactive: magnesium > zinc > nickel > copper/silver/tungsten",
+      "tips": [
+        "Higher temperature rise indicates greater reactivity",
+        "Arrange metals from highest temperature rise to lowest",
+        "Metals with 0.0°C temperature rise (copper, silver, tungsten) can be grouped together as they didn't react",
+        "You could also write it as: Mg > Zn > Ni > Cu = Ag = W",
+        "Both formats are acceptable as long as the order is correct"
+      ]
+    },
+    {
+      "question": "02.5 - Explain why it is not possible to be certain about the order of reactivity of the metals in Table 1.",
+      "answer": "The metals that showed no temperature rise (0.0°C) cannot be distinguished in terms of reactivity. Also, the experiment only tests reactivity with copper sulfate, which doesn't give information about metals less reactive than copper.",
+      "tips": [
+        "Identify limitations in the experimental design",
+        "Point out that metals with 0.0°C temperature rise might still have different reactivities that this experiment can't detect",
+        "Explain that this experiment only reveals if metals are more reactive than copper, not how they compare to each other if less reactive",
+        "For full marks, give two distinct limitations"
+      ]
+    },
+    {
+      "question": "02.6 - Suggest how you could gain more information to improve your order of reactivity.",
+      "answer": "Test the metals with different metal salt solutions (e.g., silver nitrate). Also, use other methods to test reactivity such as reactions with water, steam or acids.",
+      "tips": [
+        "Suggest using different metal salts to establish reactivity between metals that don't react with copper sulfate",
+        "Mention additional tests like reactions with acids, water, or oxygen",
+        "Be specific about what additional information would be gained",
+        "For full marks, give at least two distinct suggestions"
+      ]
+    },
+    {
+      "question": "02.7 - Give a reason why copper chloride cannot be produced by reacting copper with hydrochloric acid.",
+      "answer": "Copper is below hydrogen in the reactivity series, so it cannot displace hydrogen from acids.",
+      "tips": [
+        "Link your answer to the reactivity series",
+        "Only metals above hydrogen in the reactivity series will react with acids",
+        "You could also state that copper is not reactive enough to react with acids",
+        "Avoid vague answers like 'copper doesn't react with acids' without explanation"
+      ]
+    },
+    {
+      "question": "02.8 - Give a reason why it is not safe to produce potassium chloride by reacting potassium with hydrochloric acid.",
+      "answer": "Potassium is very reactive and would react violently/explosively with hydrochloric acid, creating a safety hazard.",
+      "tips": [
+        "Focus on the extreme reactivity of potassium as a Group 1 metal",
+        "Use terms like 'violent', 'explosive', or 'extremely exothermic' to describe the reaction",
+        "Link the safety concern directly to the high reactivity",
+        "Mention hydrogen gas production (which is flammable) for additional detail"
+      ]
+    },
+    {
+      "question": "02.9 - Explain, in terms of electrons, which species is oxidised and which is reduced in the reaction.",
+      "answer": "Magnesium is oxidised because it loses electrons to form Mg²⁺. Hydrogen ions (H⁺) are reduced because they gain electrons to form H₂.",
+      "tips": [
+        "Always define oxidation as loss of electrons and reduction as gain of electrons",
+        "Identify which specific chemical species is oxidized and which is reduced",
+        "Use the ionic equation provided to track electron transfer",
+        "For full marks, you must explain both oxidation AND reduction correctly",
+        "Remember OIL RIG: Oxidation Is Loss, Reduction Is Gain of electrons"
+      ]
+    },
+    {
+      "question": "03.1 - What is an alkali?",
+      "answer": "An alkali is a soluble base (option D).",
+      "tips": [
+        "Remember the key distinction: all alkalis are bases, but not all bases are alkalis",
+        "The defining characteristic is solubility in water",
+        "Common alkalis include sodium hydroxide, potassium hydroxide, and ammonia",
+        "Alkalis produce hydroxide ions (OH⁻) when dissolved in water"
+      ]
+    },
+    {
+      "question": "03.2 - Which estimate of hydrogen ion concentration for ethanoic acid is approximately correct?",
+      "answer": "0.001 mol/dm³ (option A)",
+      "tips": [
+        "Remember: pH = -log[H⁺]",
+        "For pH 2.9, the [H⁺] is approximately 10⁻³ mol/dm³ or 0.001 mol/dm³",
+        "Weak acids like ethanoic acid only partially ionize, so [H⁺] will be much less than the acid concentration",
+        "For each pH unit difference, the H⁺ concentration changes by a factor of 10"
+      ]
+    },
+    {
+      "question": "03.3 - Explain why the solution of hydrochloric acid has a different pH to the solution of ethanoic acid.",
+      "answer": "Hydrochloric acid is a strong acid that completely ionizes in solution, releasing all its hydrogen ions (H⁺). Ethanoic acid is a weak acid that only partially ionizes, releasing fewer hydrogen ions. This means hydrochloric acid has a higher concentration of H⁺ ions in solution, resulting in a lower pH (pH 1.0) compared to ethanoic acid (pH 2.9), despite both having the same concentration.",
+      "tips": [
+        "Compare strong acids (complete ionization) vs. weak acids (partial ionization)",
+        "Explain how ionization affects hydrogen ion concentration",
+        "Link hydrogen ion concentration to pH values",
+        "For full marks, mention all three key points: complete vs partial ionization, different H⁺ concentrations, and the resulting pH difference",
+        "Use the specific pH values from the question as evidence"
+      ]
+    }
+  ]
+}
