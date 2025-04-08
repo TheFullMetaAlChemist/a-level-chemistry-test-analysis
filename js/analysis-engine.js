@@ -347,18 +347,38 @@ function getPerformanceColor(percentage) {
 }
 
 /**
- * Function to determine grade based on percentage
+ * Function to determine grade based on percentage and test-specific boundaries
  */
 function getGrade(percentage) {
-  if (percentage >= 90) return 9;
-  if (percentage >= 80) return 8;
-  if (percentage >= 70) return 7;
-  if (percentage >= 60) return 6;
-  if (percentage >= 50) return 5;
-  if (percentage >= 40) return 4;
-  if (percentage >= 30) return 3;
-  if (percentage >= 20) return 2;
-  if (percentage >= 10) return 1;
+  // Get current test data
+  const testData = getCurrentTestData();
+  
+  // Use test-specific boundaries if available, otherwise use defaults
+  const boundaries = testData && testData.gradeBoundaries ? testData.gradeBoundaries : {
+    "9": 90,
+    "8": 80,
+    "7": 70,
+    "6": 60,
+    "5": 50,
+    "4": 40,
+    "3": 30,
+    "2": 20,
+    "1": 10,
+    "U": 0
+  };
+  
+  // Sort boundaries in descending order
+  const sortedBoundaries = Object.entries(boundaries)
+    .sort((a, b) => b[1] - a[1]);
+  
+  // Find the first boundary that the percentage meets or exceeds
+  for (const [grade, boundary] of sortedBoundaries) {
+    if (percentage >= boundary) {
+      return grade;
+    }
+  }
+  
+  // Fallback (should never reach here if boundaries include "U": 0)
   return "U";
 }
 
