@@ -109,6 +109,9 @@ function loadSelectedTest() {
       // Reset button state
       loadTestButton.textContent = 'Load Test';
       loadTestButton.disabled = false;
+      
+      // Set up password protection for model answers
+      setupModelAnswersProtection(data.teacherPassword || 'teacher123'); // Default password if not specified
     })
     .catch(error => {
       console.error('Error loading test data:', error);
@@ -152,6 +155,66 @@ function populateTestData(data) {
   // Set up the analyze button
   const analyzeButton = document.getElementById('analyseButton');
   analyzeButton.onclick = analyseResults;
+}
+
+/**
+ * Set up the password protection for model answers
+ */
+function setupModelAnswersProtection(password) {
+  // Get the elements
+  const passwordContainer = document.getElementById('modelAnswers-password-container');
+  const modelAnswersContainer = document.getElementById('modelAnswersContainer');
+  const passwordInput = document.getElementById('teacher-password');
+  const passwordSubmit = document.getElementById('password-submit');
+  const passwordMessage = document.getElementById('password-message');
+  
+  // Clear any previous password message
+  passwordMessage.textContent = '';
+  
+  // Initially hide model answers and show password protection
+  modelAnswersContainer.classList.add('hidden');
+  passwordContainer.classList.remove('hidden');
+  
+  // Check if model answers are already unlocked in this session
+  if (sessionStorage.getItem('modelAnswersUnlocked') === 'true') {
+    modelAnswersContainer.classList.remove('hidden');
+    passwordContainer.classList.add('hidden');
+  }
+  
+  // Set up event listeners
+  passwordSubmit.addEventListener('click', function() {
+    validatePassword();
+  });
+  
+  passwordInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      validatePassword();
+    }
+  });
+  
+  function validatePassword() {
+    if (passwordInput.value === password) {
+      // Password correct - show model answers
+      modelAnswersContainer.classList.remove('hidden');
+      passwordContainer.classList.add('hidden');
+      
+      // Store authentication in session storage
+      sessionStorage.setItem('modelAnswersUnlocked', 'true');
+    } else {
+      // Password incorrect - show error
+      passwordMessage.textContent = 'Incorrect password. Please try again.';
+      passwordContainer.classList.add('password-shake');
+      
+      // Remove shake animation class after animation completes
+      setTimeout(function() {
+        passwordContainer.classList.remove('password-shake');
+      }, 500);
+      
+      // Clear the password input
+      passwordInput.value = '';
+      passwordInput.focus();
+    }
+  }
 }
 
 /**
