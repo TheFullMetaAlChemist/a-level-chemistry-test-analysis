@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Analysis System</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header with title - populated from test data -->
+    <header id="test-header">
+      <h1 id="test-title">Loading Test Data...</h1>
+      <p id="test-subtitle"></p>
+    </header>
+    
+    <!-- Student Information -->
+    <div class="student-info">
+      <div class="info-group">
+        <label for="studentName">Name:</label>
+        <input type="text" id="studentName" class="info-input" placeholder="Enter your name">
+      </div>
+      <div class="info-group">
+        <label for="studentClass">Class:</label>
+        <input type="text" id="studentClass" class="info-input" placeholder="Enter your class">
+      </div>
+      <div class="info-group">
+        <label for="testDate">Test Date:</label>
+        <input type="date" id="testDate" class="info-input">
+      </div>
+    </div>
+    
+    <!-- Test Selection -->
+    <div class="section" id="test-selection-section">
+      <h2>Select a Test</h2>
+      <p>Choose which test you want to analyze:</p>
+      <select id="test-selector" class="test-selector">
+        <option value="">Loading tests...</option>
+      </select>
+      <button id="load-test-button" class="secondary">Load Test</button>
+    </div>
+    
+    <!-- Questions and Scores Section -->
+    <div class="section hidden" id="score-entry-section">
+      <h2>Enter Your Scores</h2>
+      <p>Enter the marks you achieved for each question in the test.</p>
+      
+      <table id="specTable">
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Specification Point</th>
+            <th>Marks Available</th>
+            <th>Assessment Objective</th>
+            <th>Your Score</th>
+          </tr>
+        </thead>
+        <tbody id="question-table-body">
+          <!-- Questions will be populated here -->
+        </tbody>
+      </table>
+      
+      <button id="analyseButton">Analyse Results</button>
+    </div>
+    
+    <!-- Results Section (Initially Hidden) -->
+    <div class="section hidden" id="results-section">
+      <h2>Your Results Analysis</h2>
+      
+      <div class="result-summary">
+        <div class="summary-card">
+          <div class="summary-title">Overall Performance</div>
+          <div id="totalScore"></div>
+          <div id="gradeContainer" class="grade-display-container">
+            <p>Your grade:</p>
+            <div class="grade-display" id="gradeDisplay">-</div>
+            <p id="gradePercentage" class="grade-percentage"></p>
+          </div>
+        </div>
+        
+        <div class="summary-card">
+          <div class="summary-title">Assessment Objective Performance</div>
+          <div id="aoContainer"></div>
+        </div>
+      </div>
+      
+      <!-- Tab Navigation -->
+      <div class="tab-container">
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="openTab(event, 'topicPerformance')">Topic Performance</button>
+          <button class="tab-button" onclick="openTab(event, 'revisionTab')">Revision Recommendations</button>
+          <button class="tab-button" onclick="openTab(event, 'followUpTab')">Follow-Up Questions</button>
+          <button class="tab-button" onclick="openTab(event, 'modelAnswersTab')">Model Answers</button>
+        </div>
+        
+        <!-- Topic Performance Tab -->
+        <div id="topicPerformance" class="tab-content active">
+          <h3>Topic Performance</h3>
+          <p>The table below shows your performance across different topic areas, from strongest to weakest.</p>
+          <div id="summaryContainer"></div>
+        </div>
+        
+        <!-- Revision Recommendations Tab -->
+        <div id="revisionTab" class="tab-content">
+          <h3>Revision Recommendations</h3>
+          <p>Based on your test performance, here are some targeted revision recommendations:</p>
+          <div id="recommendationsContainer"></div>
+        </div>
+        
+        <!-- Follow-Up Questions Tab -->
+        <div id="followUpTab" class="tab-content">
+          <h3>Follow-Up Practice Questions</h3>
+          <p>Work through these practice questions to improve your understanding of topics you found challenging.</p>
+          <div id="followUpContainer"></div>
+          <div id="followUpNavigation" class="follow-up-controls hidden">
+            <button id="prevQuestion" onclick="showPreviousQuestion()" class="secondary">Previous Question</button>
+            <span id="questionCounter">Question 1 of 5</span>
+            <button id="nextQuestion" onclick="showNextQuestion()">Next Question</button>
+          </div>
+        </div>
+        
+        <!-- Model Answers Tab -->
+        <div id="modelAnswersTab" class="tab-content">
+          <h3>Model Answers & Tips</h3>
+          <p>Here are model answers for each question in the test, with tips to help you improve.</p>
+          <div id="modelAnswersContainer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Load Scripts -->
+  <script src="js/data-loader.js"></script>
+  <script src="js/analysis-engine.js"></script>
+</body>
+</html>
